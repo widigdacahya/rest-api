@@ -1,0 +1,11 @@
+{
+  "name": "Widigda Desthian",
+  "age": 9,
+  "nrp": "13579",
+  "graduated": true,
+  "project": ["Coded", "AIM Lab", "Refusal"],
+  "Teacher": {
+    "First Person": "Caty Padmasari",
+    "Second Person": "Naraya Ambarwati"
+  }
+}
