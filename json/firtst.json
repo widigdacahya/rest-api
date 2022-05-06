@@ -1,11 +1,24 @@
-{
-  "name": "Widigda Desthian",
-  "age": 9,
-  "nrp": "13579",
-  "graduated": true,
-  "project": ["Coded", "AIM Lab", "Refusal"],
-  "Teacher": {
-    "First Person": "Caty Padmasari",
-    "Second Person": "Naraya Ambarwati"
+[
+  {
+    "name": "Widigda Desthian",
+    "age": 9,
+    "nrp": "13579",
+    "graduated": true,
+    "project": ["Coded", "AIM Lab", "Refusal"],
+    "Teacher": {
+      "First Person": "Caty Padmasari",
+      "Second Person": "Naraya Ambarwati"
+    }
+  },
+  {
+    "name": "Desthian Rizki",
+    "age": 8,
+    "nrp": "86421",
+    "graduated": true,
+    "project": ["Coded", "AIM Lab", "Spike Specialist"],
+    "Teacher": {
+      "First Person": "Elang Estu",
+      "Second Person": "Naraya Ambarwati"
+    }
   }
-}
+]
