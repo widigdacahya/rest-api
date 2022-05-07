@@ -40,3 +40,7 @@ xhr2.open("GET", "../firtst.json", true);
 xhr2.send();
 
 //Using Jquary
+//paramaeter, in this case named data, in form of object
+$.getJSON("../firtst.json", function (data) {
+  console.log(data);
+});
