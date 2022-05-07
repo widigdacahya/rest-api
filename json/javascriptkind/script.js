@@ -38,3 +38,5 @@ xhr2.onreadystatechange = function () {
 //run the ajax
 xhr2.open("GET", "../firtst.json", true);
 xhr2.send();
+
+//Using Jquary
