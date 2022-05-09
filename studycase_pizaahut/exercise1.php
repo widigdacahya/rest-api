@@ -14,9 +14,13 @@
       type="image/png" 
       href="img/pizza_ic.png" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
 
   </head>
   <body>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
                 <a class="navbar-brand" href="#">
@@ -34,10 +38,36 @@
                         <a class="nav-link ms-2" href="#">🥤Drink</a>
                     </div>
                 </div>
-            
         </div>
     </nav>
+    <!-- Navigation END -->
 
+    <!-- Main -->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h1>All Menu</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/menu/american-favourite.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4 class="card-title">Rp. 30.000,-</h4>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i>  Pesan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- Main END -->
 
 
 
