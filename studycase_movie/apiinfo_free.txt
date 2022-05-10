@@ -1,0 +1,12 @@
+The OMDb API <donotreply@omdbapi.com>
+11:00 AM (0 minutes ago)
+to me
+
+Here is your key: 9534a17b
+
+Please append it to all of your API requests,
+
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=9534a17b
+
+Click the following URL to activate your key: http://www.omdbapi.com/apikey.aspx?VERIFYKEY=a71a71ed-da23-416f-a4a1-677cb305938b
+If you did not make this request, please disregard this email.
