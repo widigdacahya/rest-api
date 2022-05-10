@@ -19,7 +19,7 @@ function allMenu() {
           datamenu.deskripsi +
           '</p><h4 class="card-title">Rp. ' +
           datamenu.harga +
-          '</h4><a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i>  Pesan</a></div></div></div>'
+          '</h4><a href="#" class="btn btn-warning"><i class="bi bi-cart-fill"></i>  Pesan</a></div></div></div>'
       );
     });
   });
@@ -62,7 +62,7 @@ $(".nav-link").on("click", function () {
           data.deskripsi +
           '</p><h4 class="card-title">Rp. ' +
           data.harga +
-          '</h4><a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i>  Pesan</a></div></div></div>';
+          '</h4><a href="#" class="btn btn-warning"><i class="bi bi-cart-fill"></i>  Pesan</a></div></div></div>';
       }
     });
     //html tag here will replaced everthing exsited on the page
