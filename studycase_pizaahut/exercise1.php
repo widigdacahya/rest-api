@@ -1,3 +1,16 @@
+<?php
+$data = file_get_contents('data/pizza.json');
+
+// true biar jadi array
+$menu = json_decode($data,true);
+//var_dump($menu["menu"][0]["nama"]);
+
+// biar akses array langusng
+$menu_pizza = $menu["menu"];
+//echo $menu_pizza[0]["nama"];
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,17 +64,21 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="img/menu/american-favourite.jpg" class="card-img-top">
+            
+            <?php foreach($menu_pizza as $item) : ?>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="img/menu/<?= $item["gambar"] ?>" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <h4 class="card-title">Rp. 30.000,-</h4>
+                        <h5 class="card-title"><?= $item["nama"] ?></h5>
+                        <p class="card-text"><?= $item["deskripsi"] ?></p>
+                        <h4 class="card-title">Rp. <?= $item["harga"] ?></h4>
                         <a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i>  Pesan</a>
                     </div>
                 </div>
             </div>
+            <?php endforeach; ?>
+
         </div>
 
 
