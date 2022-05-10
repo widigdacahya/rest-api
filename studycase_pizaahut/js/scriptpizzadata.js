@@ -19,3 +19,41 @@ $.getJSON("data/pizza.json", function (data) {
     );
   });
 });
+
+$(".nav-link").on("click", function () {
+  $(".nav-link").removeClass("active");
+  $(this).addClass("active");
+
+  let kategoriFromMenu = $(this).html();
+  //console.log(kategoriFromMenu);
+
+  let forKategori = kategoriFromMenu.substring(2);
+  //console.log(forKategori);
+
+  //ganti judul
+  //karena h1nya di gtml only one, jadi boleh kek gini
+  $("h1").html(kategoriFromMenu);
+
+  $.getJSON("data/pizza.json", function (dataresult) {
+    //tadi diatas pake append, skearng dengan differet apporach
+    let pizzaHereMenu = dataresult.menu;
+    let content = "";
+
+    $.each(pizzaHereMenu, function (i, data) {
+      if (data.kategori == forKategori.toLowerCase()) {
+        content +=
+          '<div class="col-md-4"><div class="card mb-3"><img src="img/menu/' +
+          data.gambar +
+          '" class="card-img-top"><div class="card-body"><h5 class="card-title">' +
+          data.nama +
+          '</h5><p class="card-text">' +
+          data.deskripsi +
+          '</p><h4 class="card-title">Rp. ' +
+          data.harga +
+          '</h4><a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i>  Pesan</a></div></div></div>';
+      }
+    });
+    //html tag here will replaced everthing exsited on the page
+    $("#daftar-menu").html(content);
+  });
+});
