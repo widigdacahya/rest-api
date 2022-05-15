@@ -35,7 +35,9 @@ function toSearchMovie() {
               `</h6>
               <div class="row">
                 <div class="col d-grid gap-2">
-                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#movieModal"><i class="bi bi-info-circle-fill"></i> Detail</a>
+                    <a href="#" class="btn btn-dark see-detail-movie" data-bs-toggle="modal" data-bs-target="#movieModal" data-id="` +
+              movie.imdbID +
+              `"><i class="bi bi-info-circle-fill"></i> Detail</a>
                 </div>
                 <div class="col d-grid gap-2">
                     <a href="https://www.google.com/search?q=` +
@@ -89,4 +91,9 @@ $("#search-input").on("keyup", function (event) {
   if (event.keyCode === 13 && $("#search-input").val() == "") {
     $("#movie-list").html("");
   }
+});
+
+// for modal things
+$("#movie-list").on("click", ".see-detail-movie", function () {
+  console.log($(this).data("id"));
 });
