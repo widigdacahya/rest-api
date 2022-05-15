@@ -65,8 +65,8 @@ function toSearchMovie() {
 
         //writing like html,using backtick
         $("#movie-list").html(`
-            <div class="col">
-                <h1 class='text-center text-white'>Not Found😅</h1>
+            <div class="col text-white">
+                <h1 class='text-center'>Not Found😅</h1>
             </div>            
         `);
       }
