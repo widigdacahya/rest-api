@@ -1,5 +1,4 @@
-// when clicked, ask to api
-$("#search-button").on("click", function () {
+function toSearchMovie() {
   //clean first
   $("#movie-list").html("");
 
@@ -62,4 +61,23 @@ $("#search-button").on("click", function () {
       }
     },
   });
+}
+
+// when clicked, ask to api
+$("#search-button").on("click", function () {
+  if ($("#search-input").val() != "") {
+    toSearchMovie();
+  } else {
+    $("#movie-list").html("");
+  }
+});
+
+//when enter pressed
+$("#search-input").on("keyup", function (event) {
+  if (event.keyCode === 13 && $("#search-input").val() != "") {
+    toSearchMovie();
+  }
+  if (event.keyCode === 13 && $("#search-input").val() == "") {
+    $("#movie-list").html("");
+  }
 });
