@@ -33,9 +33,20 @@ function toSearchMovie() {
                                 <h6 class="card-subtitle mb-2 text-muted">` +
               movie.Year +
               `</h6>
-                                <a href="https://www.google.com/search?q=` +
+              <div class="row">
+                <div class="col d-grid gap-2">
+                    <a href="https://www.google.com/search?q=` +
               movie.Title +
-              `" class="btn btn-dark" target="_blank"><i class="bi bi-info-circle-fill"></i> See More</a>
+              `" class="btn btn-dark" target="_blank"><i class="bi bi-info-circle-fill"></i> Detail</a>
+                </div>
+                <div class="col d-grid gap-2">
+                    <a href="https://www.google.com/search?q=` +
+              movie.Title +
+              `" class="btn btn-dark" target="_blank"><i class="bi bi-google"></i> Google</a>
+                </div>
+              </div>
+                                
+                                
                             </div>
                     </div>
                 </div>
