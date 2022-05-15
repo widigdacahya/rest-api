@@ -95,5 +95,58 @@ $("#search-input").on("keyup", function (event) {
 
 // for modal things
 $("#movie-list").on("click", ".see-detail-movie", function () {
-  console.log($(this).data("id"));
+  //console.log($(this).data("id"));
+
+  $.ajax({
+    url: "http://www.omdbapi.com",
+    type: "get",
+    dataType: "json",
+    data: {
+      apikey: "9534a17b",
+      i: $(this).data("id"),
+    },
+    success: function (moviedata) {
+      if (moviedata.Response === "True") {
+        $(".modal-body").html(
+          `
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="` +
+            moviedata.Poster +
+            `" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                                <li class="list-group-item"><h3>` +
+            moviedata.Title +
+            `</h3></li>
+                                <li class="list-group-item">📅 <b>Released :</b> ` +
+            moviedata.Released +
+            `</li>
+                                <li class="list-group-item">📚 <b>Genre :</b> ` +
+            moviedata.Genre +
+            `</li>
+                                <li class="list-group-item">🚩 <b>Director :</b> ` +
+            moviedata.Director +
+            `</li>
+                                <li class="list-group-item">📝 <b>Writer :</b> ` +
+            moviedata.Writer +
+            `</li>
+                                <li class="list-group-item">👥 <b>Actors :</b> ` +
+            moviedata.Actors +
+            `</li>
+                                <li class="list-group-item list-group-item-light">` +
+            moviedata.Plot +
+            `</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `
+        );
+      }
+    },
+  });
 });
