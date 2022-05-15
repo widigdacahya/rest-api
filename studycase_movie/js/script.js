@@ -35,9 +35,7 @@ function toSearchMovie() {
               `</h6>
               <div class="row">
                 <div class="col d-grid gap-2">
-                    <a href="https://www.google.com/search?q=` +
-              movie.Title +
-              `" class="btn btn-dark" target="_blank"><i class="bi bi-info-circle-fill"></i> Detail</a>
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#movieModal"><i class="bi bi-info-circle-fill"></i> Detail</a>
                 </div>
                 <div class="col d-grid gap-2">
                     <a href="https://www.google.com/search?q=` +
