@@ -1,0 +1,88 @@
+{
+  "daftar_laporan": [
+    {
+      "id_laporan": 1,
+      "kabupaten": "Bondowoso",
+      "provinsi": "Jawa Timur",
+      "pelapor": "Estiningtyas",
+      "korban": "Estiningtyas",
+      "pelaku": "tidak tahu",
+      "waktu_lapor": "5/13/2022 21:36:50",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/13/2022 21:36:50"
+    },
+    {
+      "id_laporan": 2,
+      "kabupaten": "Jember",
+      "provinsi": "Jawa Timur",
+      "pelapor": "Agniasari",
+      "korban": "Puspa",
+      "pelaku": "kerabat dekat",
+      "waktu_lapor": "5/14/2022 08:12:03",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/14/2022 12:12:20"
+    },
+    {
+      "id_laporan": 3,
+      "kabupaten": "Mojokerto",
+      "provinsi": "Jawa Timur",
+      "pelapor": "Sukma",
+      "korban": "Nareswari",
+      "pelaku": "Tidak Dikenal",
+      "waktu_lapor": "5/14/2022 09:14:23",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/14/2022 09:14:23"
+    },
+    {
+      "id_laporan": 4,
+      "kabupaten": "Tasikmalaya",
+      "provinsi": "Jawa Barat",
+      "pelapor": "Ayunda",
+      "korban": "Ayunda",
+      "pelaku": "Mantan Pacar",
+      "waktu_lapor": "5/15/2022 19:14:23",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/15/2022 19:14:23"
+    },
+    {
+      "id_laporan": 5,
+      "kabupaten": "Cimahi",
+      "provinsi": "Jawa Barat",
+      "pelapor": "Puspita",
+      "korban": "Asmarini",
+      "pelaku": "Paman Korban",
+      "waktu_lapor": "5/15/2022 20:12:12",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/15/2022 20:12:12"
+    },
+    {
+      "id_laporan": 6,
+      "kabupaten": "Situbondo",
+      "provinsi": "Jawa Timur",
+      "pelapor": "Dita Damayanti",
+      "korban": "Dita Damayanti",
+      "pelaku": "Teman",
+      "waktu_lapor": "5/16/2022 07:14:22",
+      "urgensi": "darurat",
+      "status_laporan": "sedang diproses",
+      "terakhir_diubah": "5/16/2022 09:14:22"
+    },
+    {
+      "id_laporan": 7,
+      "kabupaten": "Malang",
+      "provinsi": "Jawa Timur",
+      "pelapor": "Erina Hastanti",
+      "korban": "Erina Hastanti",
+      "pelaku": "Teman",
+      "waktu_lapor": "5/16/2022 08:12:13",
+      "urgensi": "normal",
+      "status_laporan": "baru",
+      "terakhir_diubah": "5/16/2022 08:12:13"
+    }
+  ]
+}

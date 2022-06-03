@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
+
+    <title>💬 Iswara Dashboard</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="asset/textlogo.png" alt="" width="120" class="d-inline-block align-text-top" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Semua</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Baru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Diproses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Selesai</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Search bar -->
+    <div class="container mt-4">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="cari berdasarkan nama atau urgensi" aria-label="cari berdasarkan nama atau urgensi" aria-describedby="button-addon2" />
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i> Search</button>
+      </div>
+    </div>
+
+    <!-- Search bar End -->
+
+    <!-- Table Preview Laporan -->
+    <div class="container table-responsive-md">
+      <table class="table table-bordered">
+        <thead class="table-warning">
+          <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Status</th>
+            <th scope="col">Korban</th>
+            <th scope="col">Pelapor</th>
+            <th scope="col">Urgensi</th>
+            <th scope="col">Waktu Lapor</th>
+            <th scope="col">Terakhir Diubah</th>
+            <th scope="col">Keterangan</th>
+          </tr>
+        </thead>
+        <tbody id="daftar-laporan-diterima">
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Table Preview Laporan End-->
+
+    <!-- Modal Detail Info -->
+    <div class="modal fade" id="laporanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detail Laporan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item"><b>Id Laporan</b>: 1</li>
+              <li class="list-group-item"><b>Tempat: Bondowoso, Jawa Timur</li>
+              <li class="list-group-item"><b>Nama Pelapor</b>: Estiningtyas</li>
+              <li class="list-group-item"><b>Alamat Pelapor</b>: Jalan RE. Martadinata 256 Bondowoso</li>
+              <li class="list-group-item"><b>Nama Korban:</b> Estiningtyas</li>
+              <li class="list-group-item"><b>Alamat Korban(KTP):</b> Jalan RE. Martadinata 100 Bondowoso</li>
+              <li class="list-group-item"><b>Alamat Korban(Domisili):</b> Jalan RE. Martadinata 100 Bondowoso</li>
+              <li class="list-group-item"><b>NIK:</b> 012343210123</li>
+              <li class="list-group-item"><b>Jenis Kelamin:</b> Perempuan</li>
+              <li class="list-group-item"><b>Usia:</b> 23 tahun</li>
+              <li class="list-group-item"><b>Kontak:</b> WA 080011112222</li>
+              <li class="list-group-item"><b></b>Pekerjaan Korban: mahasiswi</li>
+              <li class="list-group-item"><b>Pendidikan Terakhir:</b> SMA</li>
+              <li class="list-group-item"><b>Status Pernikahan:</b> Belum Menikah</li>
+              <li class="list-group-item"><b>Usia saat menikah:</b> -</li>
+              <li class="list-group-item"><b>Tempat dan Tanggal Lahir Pelaku</b>: tidak tahu</li>
+              <li class="list-group-item"><b>Alamat Pelaku:</b> tidak tahu</li>
+              <li class="list-group-item"><b>Pekerjaan Pelaku:</b> tidak tahu</li>
+              <li class="list-group-item"><b>Pendidikan Pelaku:</b> tidak tahu</li>
+              <li class="list-group-item"><b>Pendidikan Pelaku:</b> tidak tahu</li>
+              <li class="list-group-item"><b>Identitas Pelaku:</b> tidak tahu</li>
+              <li class="list-group-item"><b>Waktu Lapor:</b> 5/13/2022 21:36:50</li>
+              <li class="list-group-item"><b>Kekerasan yang dialami:</b> dipukul, diintimidasi, perkosaan</li>
+              <li class="list-group-item"><b>Upaya yang sudah dilakukan:</b> belum ada dan belum tahu</li>
+              <li class="list-group-item"><b>Kebutuhan Pelapor:</b> lapor polisi agar pelaku dihukum,rumah aman</li>
+              <li class="list-group-item">
+                <b>Kronologi Kasus:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur tortor non justo ornare, eu lobortis sapien rutrum. Nulla mattis, nibh id porttitor ultricies, nulla nisl ultrices ipsum, ac
+                hendrerit lacus sapien a velit. Praesent auctor vel nisi et finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas luctus arcu a consequat ultrices. Nunc aliquet vulputate
+                volutpat. Mauris ipsum tortor, posuere sed pellentesque ut, semper ac sem. Aenean sollicitudin dignissim vehicula. Suspendisse vehicula euismod nibh. Duis hendrerit erat nisi, ac ullamcorper mi tristique nec. Suspendisse
+                hendrerit laoreet est, vel pharetra orci vestibulum vel. Nam eu tellus nec felis finibus varius nec non orci. Duis tristique elit nec cursus vehicula. Curabitur eu rutrum est. Donec erat nunc, venenatis et metus vitae,
+                viverra cursus enim. Nam sed lobortis augue. Vestibulum at porta neque, vel faucibus lacus. Ut sed ipsum venenatis, malesuada est vitae, venenatis odio. Sed sed dictum lacus. Sed rutrum eget enim sodales hendrerit. Donec
+                dignissim justo et purus cursus rutrum. Suspendisse pharetra nisi id scelerisque faucibus. Cras rhoncus varius efficitur. Maecenas in est dapibus, imperdiet lorem sit amet, feugiat turpis. Ut lobortis, turpis vehicula
+                facilisis ullamcorper, justo erat placerat felis, in congue velit felis sit amet quam. Ut porta orci mollis, ultricies mi sit amet, vestibulum libero.
+              </li>
+              <li class="list-group-item"><b>Urgensi:</b> normal</li>
+              <li class="list-group-item"><b>Terakhir diubah:</b> 5/13/2022 21:36:50 <b>oleh</b> ...</li>
+              <li class="list-group-item">
+                <img src="https://media.giphy.com/media/l4KibK3JwaVo0CjDO/giphy.gif" class="img-fluid" alt="..." />
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="bi bi-pencil-fill"></i> Edit</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Detail Info End -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- our script -->
+    <script src="script.js"></script>
+  </body>
+</html>
