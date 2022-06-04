@@ -120,6 +120,7 @@ $latestVidId = $resultLatestVid['items'][0]['id']['videoId'];
                         <div class="col-md-8">
                         <h5><?= $ytChannelName; ?></h5>
                         <p><?= $ytSubs; ?> Subscribers</p>
+                        <div class="g-ytsubscribe" data-channelid="UC5YUkCPbl2QSxm3vzWO9SYA" data-layout="default" data-theme="dark" data-count="default"></div>
                         </div>
                     </div>
                     <div class="row">
@@ -321,5 +322,8 @@ $latestVidId = $resultLatestVid['items'][0]['id']['videoId'];
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- adding yt subs button -->
+    <script src="https://apis.google.com/js/platform.js"></script>
   </body>
 </html>
