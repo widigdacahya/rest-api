@@ -7,7 +7,11 @@ $result = curl_exec($curl);
 curl_close($curl);
 
 $resultDecode = json_decode($result, true);
-var_dump($resultDecode);
+// var_dump($resultDecode);
+
+$ytProfilePict = $resultDecode['items'][0]['snippet']['thumbnails']['medium']['url'];
+$ytChannelName = $resultDecode['items'][0]['snippet']['title'];
+$ytSubs = $resultDecode['items'][0]['statistics']['subscriberCount'];
 
 ?>
 
@@ -95,11 +99,11 @@ var_dump($resultDecode);
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="img/profile1.png" width="100" class="rounded-circle img-thumbnail">
+                            <img src="<?= $ytProfilePict; ?>" width="100" class="rounded-circle img-thumbnail">
                         </div>
                         <div class="col-md-8">
-                        <h5>Kucing Cemara</h5>
-                        <p>500000 Subscribers</p>
+                        <h5><?= $ytChannelName; ?></h5>
+                        <p><?= $ytSubs; ?> Subscribers</p>
                         </div>
                     </div>
                     <div class="row">
