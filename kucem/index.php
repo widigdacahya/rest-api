@@ -16,7 +16,7 @@ function get_CURL($url) {
 }
 
 // data channel
-$resultDecode = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC5YUkCPbl2QSxm3vzWO9SYA&key=AIzaSyBewcSEm51b_-mJSDddRPwtXy1giiLNYAk');
+$resultDecode = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC5YUkCPbl2QSxm3vzWO9SYA&key=YOUR_API_KEY');
 
 $ytProfilePict = $resultDecode['items'][0]['snippet']['thumbnails']['medium']['url'];
 $ytChannelName = $resultDecode['items'][0]['snippet']['title'];
@@ -24,7 +24,7 @@ $ytSubs = $resultDecode['items'][0]['statistics']['subscriberCount'];
 
 
 // latest video
-$resultLatestVid = get_CURL('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBewcSEm51b_-mJSDddRPwtXy1giiLNYAk&channelId=UC5YUkCPbl2QSxm3vzWO9SYA&maxResults=1&order=date&part=snippet');
+$resultLatestVid = get_CURL('https://www.googleapis.com/youtube/v3/search?key=YOUR_API_KEY&channelId=UC5YUkCPbl2QSxm3vzWO9SYA&maxResults=1&order=date&part=snippet');
 
 //var_dump($resultLatestVid);
 $latestVidId = $resultLatestVid['items'][0]['id']['videoId'];
